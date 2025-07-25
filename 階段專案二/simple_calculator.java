@@ -12,9 +12,24 @@ public class simple_calculator {
         System.out.print("請輸入第二個數字：");
         double num2 = scanner.nextDouble();
 
-        double result = num1 + num2;
-        System.out.println("結果是：" + result);
+        System.out.print("請輸入運算符號 (+, -, *, /)：");
+        String op = scanner.next();
 
+        double result;
+
+        if (op.equals("+")) {
+            result = num1 + num2;
+        } else if (op.equals("-")) {
+            result = num1 - num2;
+        } else {
+            System.out.println("不支援的運算符號");
+            scanner.close();
+            return;
+        }
+
+        System.out.println("結果是：" + result);
+        
         scanner.close();
+
     }
 }
