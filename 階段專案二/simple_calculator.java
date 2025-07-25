@@ -21,6 +21,10 @@ public class simple_calculator {
             result = num1 + num2;
         } else if (op.equals("-")) {
             result = num1 - num2;
+        }else if (op.equals("*")) {
+            result = num1 * num2;
+        }else if (op.equals("/")) {
+            result = num1 / num2;
         } else {
             System.out.println("不支援的運算符號");
             scanner.close();
